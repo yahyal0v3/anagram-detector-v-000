@@ -21,7 +21,7 @@ attr_accessor :word
   #end
 
   def match(array)
-    tenacity = false
+    tenacity = []
     array.each do |word|
       binding.pry
       tenacity = word.split("").all? do |letter|
@@ -35,5 +35,3 @@ attr_accessor :word
   end
 
 end
-
-
