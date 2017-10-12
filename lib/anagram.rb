@@ -21,7 +21,7 @@ attr_accessor :word
   #end
 
   def match(array)
-    tenacity = []
+    tenacity = false
     array.each do |word|
       binding.pry
       tenacity = word.split("").all? do |letter|
@@ -31,6 +31,9 @@ attr_accessor :word
     end
     if tenacity == true
       anagram
+    else 
+      []
+    end
     end
   end
 
