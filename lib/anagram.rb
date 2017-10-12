@@ -27,11 +27,11 @@ attr_accessor :word
       tenacity = word.split("").all? do |letter|
         @word.include?(letter)
       end
+      anagram = word
     end
     if tenacity == true
-      anagram << @word
+      anagram
     end
-    tenacity
   end
 
 end
