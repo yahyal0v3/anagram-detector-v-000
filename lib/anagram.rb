@@ -36,6 +36,4 @@ attr_accessor :word
 
 end
 
-detector = Anagram.new('ba')
-array = ['ab', 'abc', 'bac']
-detector.match(array)
+
