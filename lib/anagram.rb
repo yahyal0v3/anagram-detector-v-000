@@ -21,18 +21,12 @@ attr_accessor :word
   #end
 
   def match(array)
-    tenacity = false
+    anagram = []
     array.each do |word|
       binding.pry
-      tenacity = word.split("").all? do |letter|
-        @word.include?(letter)
+      if word.split("").sort == self.word.split("").sort
+        anagram = word
       end
-      anagram = word
-    end
-    if tenacity == true
-      anagram
-    else
-      []
     end
   end
 
