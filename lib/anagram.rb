@@ -23,11 +23,11 @@ attr_accessor :word
   def match(array)
     anagram = []
     array.each do |word|
-      binding.pry
       if word.split("").sort == self.word.split("").sort
-        anagram = word
+        anagram << word
       end
     end
+    anagram
   end
 
 end
