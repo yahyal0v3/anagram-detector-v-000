@@ -31,9 +31,8 @@ attr_accessor :word
     end
     if tenacity == true
       anagram
-    else 
+    else
       []
-    end
     end
   end
 
