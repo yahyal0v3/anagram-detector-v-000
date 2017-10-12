@@ -1,7 +1,7 @@
-# Your code goes here!
 require 'pry'
 
 # Your code goes here!
+
 class Anagram
 attr_accessor :word
 
@@ -21,18 +21,21 @@ attr_accessor :word
   #end
 
   def match(array)
-    binding.pry
-    anagram = []
-    tenacity = nil
+    tenacity = false
     array.each do |word|
+      binding.pry
       tenacity = word.split("").all? do |letter|
         @word.include?(letter)
-        if tenacity == true
-          anagram << @word
-        end
       end
     end
-    anagram
+    if tenacity == true
+      anagram << @word
+    end
+    tenacity
   end
 
 end
+
+detector = Anagram.new('ba')
+array = ['ab', 'abc', 'bac']
+detector.match(array)
